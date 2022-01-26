@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width,initial-scale=1.0">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    
+    <script src="https://kit.fontawesome.com/2ccdced28c.js" crossorigin="anonymous"></script>
+
+    <title>LML STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="image/logoPage.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+             <ul>
+                 <li><a href="index.html">HOME</a></li>
+                 <li><a href="games.html">GAMES</a></li>
+                 <li><a href="blog.html">BLOG</a></li>
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Contact</h1>
+</section>
+
+<!------Contact content------->
+<section class="contact autoReveal">
+    <div class="contact-info">
+      <div class="card">
+        <i class="card-icon far fa-envelope"></i>
+        <p>leminhlocgames@gmail.com</p>
+      </div>
+        
+      <div class="card link">
+        <a href="https://www.facebook.com/gaming.lml.90/" target="_blank" rel="noopener noreferrer"><i class="card-icon fab fa-facebook"></i></a>
+        <p><a href="https://www.facebook.com/gaming.lml.90/" target="_blank" rel="noopener noreferrer">Sam Kevin</a></p>
+      </div>
+    
+      <div class="card link">
+        <a href="https://twitter.com/lmlgames" target="_blank" rel="noopener noreferrer"><i class="card-icon fab fa-twitter"></i></a>
+        <p><a href="https://twitter.com/lmlgames" target="_blank" rel="noopener noreferrer">@lmlgames</a></p>
+      </div>
+
+      <div class="card">
+        <i class="card-icon fab fa-discord"></i>
+        <p>lml#7360</p>
+      </div>
+    </div>
+    
+</section>
+
+<!-----Footer-------->
+    
+<section class="footer">
+    <div class="social">
+        <a href="https://www.facebook.com/lmlstudiodev" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/lmlgames" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.gg/74njsNQfhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+        <a href="https://www.youtube.com/channel/UC6h11z3AIs5xPCL72qdtYLg/featured" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+        <a href="https://lml-studio.itch.io/" target="_blank" rel="noopener noreferrer"><i class="fab fa-itch-io"></i></a>
+    </div>
+    
+    <ul class="list">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="games.html">Games</a>
+        </li>
+        <li>
+            <a href="blog.html">Blog</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+    
+    <p>Made with by Le Minh Loc.<br> Check out the <a href="youtube.com" target="_blank" rel="noopener noreferrer">source code </a>of this website on Github.</p> 
+    
+    <p class="copyright">
+        LML STUDIO @ 2021
+    </p>
+    
+</section>
+    
+    
+<!-----JavaScript for Toggle Menu on Phone----->
+<script>
+    
+    var navLinks = document.getElementById("navLinks")
+    
+    function showMenu(){
+        navLinks.style.right = "0"
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px"
+    }
+    
+</script>
+    
+<!-----Reveal Website Elements On Scroll Effect------->
+<script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+    
+    var autoReveals = document.querySelectorAll('.autoReveal');
+    
+    for(var i = 0; i<autoReveals.length; i++){
+        
+        autoReveals[i].classList.add('active');
+            
+    }
+    
+    function reveal()
+    {
+        var reveals = document.querySelectorAll('.reveal');
+        
+        
+        for(var i = 0; i<reveals.length; i++){
+            
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 150;
+            
+            if(revealtop < windowheight - revealPoint){
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+</script>
+    
+</body>
+</html>
