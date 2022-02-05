@@ -167,6 +167,7 @@
         <a href="https://discord.gg/74njsNQfhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
         <a href="https://www.youtube.com/channel/UC6h11z3AIs5xPCL72qdtYLg/featured" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
         <a href="https://lml-studio.itch.io/" target="_blank" rel="noopener noreferrer"><i class="fab fa-itch-io"></i></a>
+        <a href="https://github.com/leminhloc2008" target="_blank" rel="noopener noreferrer"><i class="fab fa-github "></i></a>
     </div>
     
     <ul class="list">
@@ -222,11 +223,22 @@
         autoReveals[i].classList.add('active');
             
     }
+        
+    var autoLeftReveals = document.querySelectorAll('.autoLeftReveal');
+
+    for(var i = 0; i<autoLeftReveals.length; i++){
+        autoLeftReveals[i].classList.add('active');
+    }
+    
+    var navReveals = document.querySelectorAll('.navReveal');
+    
+    for(var i = 0; i<autoLeftReveals.length; i++){
+        navReveals[i].classList.add('active');
+    }
     
     function reveal()
     {
         var reveals = document.querySelectorAll('.reveal');
-        
         
         for(var i = 0; i<reveals.length; i++){
             
@@ -236,6 +248,19 @@
             
             if(revealtop < windowheight - revealPoint){
                 reveals[i].classList.add('active');
+            }
+        }
+        
+        var leftReveals = document.querySelectorAll('.leftReveal');
+        
+        for(var i = 0; i<leftReveals.length; i++){
+            
+            var windowheight = window.innerHeight;
+            var revealtop = leftReveals[i].getBoundingClientRect().top;
+            var revealPoint = 150;
+            
+            if(revealtop < windowheight - revealPoint){
+                leftReveals[i].classList.add('active');
             }
         }
     }

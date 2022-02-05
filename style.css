@@ -66,10 +66,36 @@ nav img{
 .text-box h1{
     font-size: 62px;
 }
+.text-box h2{
+    font-size: 62px;
+}
 .text-box p{
     margin: 10px 0 40px;
     font-size: 14px;
     color: #fff;
+}
+.socialMediaIcon{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.socialMediaIcon a{
+    font-size: 30px;
+    color: inherit;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+.socialMediaIcon a:hover{
+    opacity: 0.9;
 }
 .hero-btn{
     display: inline-block;
@@ -112,7 +138,14 @@ nav .fa{
 @media(max-width: 700px){
     .text-box h1{
         font-size: 20px;
-    } 
+    }
+    .text-box h2{
+        font-size: 20px;
+    }
+    .socialMediaIcon a{
+        font-size: 20px;
+        margin: 0 0px;
+    }
     .nav-links ul li{
         display: block;
     }
@@ -677,6 +710,38 @@ h3{
     transition: all 2s ease;
 }
 .autoReveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.leftReveal{
+    position: relative;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.leftReveal.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.autoLeftReveal{
+    position: relative;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.autoLeftReveal.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.navReveal{
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.navReveal.active{
     transform: translateY(0px);
     opacity: 1;
 }

@@ -16,7 +16,7 @@
     
 <body>
 <section class="header">
-    <nav>
+    <nav class="navReveal">
         <a href="index.html"><img src="image/logoPage.png"></a>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -32,11 +32,19 @@
     </nav>
 
     <div class="text-box">
-        <h1>Welcome <span class="auto-input"></span></h1>
-        <p>Hi! I'm an indie game developer & programmer</p>
+        <h1 class="autoLeftReveal">Hi!</h1>
+        <h2><span class="auto-input"></span></h2>
+        <p>I'm an indie game developer & programmer</p>
         <a href="games.html" class="hero-btn">Play My Games</a>
-    </div>    
-
+    </div>
+    <div class="socialMediaIcon">
+        <a href="https://www.facebook.com/lmlstudiodev" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" style="color: deepskyblue"></i></a>
+        <a href="https://twitter.com/lmlgames" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" style="color: skyblue"></i></a>
+        <a href="https://discord.gg/74njsNQfhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord" style="color: royalblue"></i></a>
+        <a href="https://www.youtube.com/channel/UC6h11z3AIs5xPCL72qdtYLg/featured" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" style="color: red"></i></a>
+        <a href="https://lml-studio.itch.io/" target="_blank" rel="noopener noreferrer"><i class="fab fa-itch-io" style="color: indianred"></i></a>
+        <a href="https://github.com/leminhloc2008" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+    </div>
 </section>
     
 <!----- Project 
@@ -89,7 +97,7 @@
             </div>
         </div>
     </div>
-    
+    <!----------
     <div class="row">
         <div class="games-col">
             <img src="image/robberymission.png" alt="">
@@ -113,6 +121,7 @@
             </div>
         </div>
     </div>
+------------->
     
 </section>
 
@@ -254,7 +263,7 @@
 
         <h3 class="user-name">Lê Minh Lộc</h3>
         <h5>Indie Game Developer</h5>
-        <p>Hi! I'm thirteen years old.<br>I like to make games and deep learning / machine learning<br>projects in my free time.<br>Programming languages that i know: C++, C#, Python and a little HTML & CSS</p>
+        <p>Hi! I'm thirteen years old.<br>I like to make games and deep learning / machine learning<br>projects in my free time.<br>Programming languages that i know: C++, C#, Python and HTML & CSS</p>
       </div>
     </div>
 </section>
@@ -293,6 +302,7 @@
         <a href="https://discord.gg/74njsNQfhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
         <a href="https://www.youtube.com/channel/UC6h11z3AIs5xPCL72qdtYLg/featured" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
         <a href="https://lml-studio.itch.io/" target="_blank" rel="noopener noreferrer"><i class="fab fa-itch-io"></i></a>
+        <a href="https://github.com/leminhloc2008" target="_blank" rel="noopener noreferrer"><i class="fab fa-github "></i></a>
     </div>
     
     <ul class="list">
@@ -339,7 +349,7 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
     var type = new Typed(".auto-input", {
-        strings: ["to the homepage of LML STUDIO"],
+        strings: ["I'm Le Minh Loc"],
         typeSpeed: 40
     })
 </script>
@@ -355,11 +365,22 @@
         autoReveals[i].classList.add('active');
             
     }
+        
+    var autoLeftReveals = document.querySelectorAll('.autoLeftReveal');
+
+    for(var i = 0; i<autoLeftReveals.length; i++){
+        autoLeftReveals[i].classList.add('active');
+    }
+    
+    var navReveals = document.querySelectorAll('.navReveal');
+    
+    for(var i = 0; i<autoLeftReveals.length; i++){
+        navReveals[i].classList.add('active');
+    }
     
     function reveal()
     {
         var reveals = document.querySelectorAll('.reveal');
-        
         
         for(var i = 0; i<reveals.length; i++){
             
@@ -369,6 +390,19 @@
             
             if(revealtop < windowheight - revealPoint){
                 reveals[i].classList.add('active');
+            }
+        }
+        
+        var leftReveals = document.querySelectorAll('.leftReveal');
+        
+        for(var i = 0; i<leftReveals.length; i++){
+            
+            var windowheight = window.innerHeight;
+            var revealtop = leftReveals[i].getBoundingClientRect().top;
+            var revealPoint = 150;
+            
+            if(revealtop < windowheight - revealPoint){
+                leftReveals[i].classList.add('active');
             }
         }
     }
