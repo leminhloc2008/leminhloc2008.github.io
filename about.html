@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="with=device-width,initial-scale=1.0">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    
+
     <script src="https://kit.fontawesome.com/2ccdced28c.js" crossorigin="anonymous"></script>
 
     <title>LML STUDIO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-</head>
-<body>
-<section class="sub-header">
-    <nav>
-        <a href="index.html"><img src="image/logoPage.png"></a>
-        <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-             <ul>
-                 <li><a href="index.html">HOME</a></li>
-                 <li><a href="games.html">GAMES</a></li>
-                 <li><a href="blog.html">BLOG</a></li>
-                 <li><a href="about.html">ABOUT</a></li>
-                 <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
-    </nav>
-    <h1>About</h1>
-</section>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!------About content
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="image/logoPage.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="games.html">GAMES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About</h1>
+    </section>
+
+    <!------About content
 <section class="about autoReveal">
     
     <div class="row">
@@ -49,129 +51,137 @@
     
 </section>
 ------->
-    
-<section class="members">
-    <h1 class="autoLeftReveal">About</h1>
-    <p class="autoLeftReveal">About Me</p>
-    
-    <div class="profiles autoReveal">
-      <div class="profile">
-        <img src="image/member.png" class="profile-img">
 
-        <h3 class="user-name">Lê Minh Lộc</h3>
-        <h5>Indie Game Developer</h5>
-        <p>Hi! I'm thirteen years old.<br>I like to make games and deep learning / machine learning<br>projects in my free time.<br>Programming languages that i know: C++, C#, Python and HTML & CSS</p>
-      </div>
-    </div>
-</section>
+    <section class="members">
+        <h1 class="autoLeftReveal">About</h1>
+        <p class="autoLeftReveal">About Me</p>
 
-<!-----Footer-------->
-    
-<section class="footer">
-    <div class="social">
-        <a href="https://www.facebook.com/lmlstudiodev" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" style="color: #00C6FF"></i></a>
-        <a href="https://twitter.com/lmlgames" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" style="color: #00acee"></i></a>
-        <a href="https://discord.gg/74njsNQfhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord" style="color: #5865F2"></i></a>
-        <a href="https://www.youtube.com/channel/UC6h11z3AIs5xPCL72qdtYLg/featured" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" style="color: #c4302b"></i></a>
-        <a href="https://lml-studio.itch.io/" target="_blank" rel="noopener noreferrer"><i class="fab fa-itch-io" style="color: indianred"></i></a>
-        <a href="https://github.com/leminhloc2008" target="_blank" rel="noopener noreferrer"><i class="fab fa-github "></i></a>
-    </div>
-    
-    <ul class="list">
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="games.html">Games</a>
-        </li>
-        <li>
-            <a href="blog.html">Blog</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
-    </ul>
-    
-    <p>Made by Le Minh Loc.<br> Check out the <a href="https://github.com/leminhloc2008/lmlgames" target="_blank" rel="noopener noreferrer">source code </a>of this website on Github.</p> 
-    
-    <p class="copyright">
-        LML STUDIO @ 2021
-    </p>
-    
-</section>
-    
-    
-    
-<!-----JavaScript for Toggle Menu on Phone----->
-<script>
-    
-    var navLinks = document.getElementById("navLinks")
-    
-    function showMenu(){
-        navLinks.style.right = "0"
-    }
-    function hideMenu(){
-        navLinks.style.right = "-200px"
-    }
-    
-</script>
-    
-<!-----Reveal Website Elements On Scroll Effect------->
-<script type="text/javascript">
-    window.addEventListener('scroll', reveal);
-    
-    var autoReveals = document.querySelectorAll('.autoReveal');
-    
-    for(var i = 0; i<autoReveals.length; i++){
-        
-        autoReveals[i].classList.add('active');
-            
-    }
-        
-    var autoLeftReveals = document.querySelectorAll('.autoLeftReveal');
+        <div class="profiles autoReveal">
+            <div class="profile">
+                <img src="image/member.png" class="profile-img">
 
-    for(var i = 0; i<autoLeftReveals.length; i++){
-        autoLeftReveals[i].classList.add('active');
-    }
-    
-    var navReveals = document.querySelectorAll('.navReveal');
-    
-    for(var i = 0; i<autoLeftReveals.length; i++){
-        navReveals[i].classList.add('active');
-    }
-    
-    function reveal()
-    {
-        var reveals = document.querySelectorAll('.reveal');
-        
-        for(var i = 0; i<reveals.length; i++){
-            
-            var windowheight = window.innerHeight;
-            var revealtop = reveals[i].getBoundingClientRect().top;
-            var revealPoint = 150;
-            
-            if(revealtop < windowheight - revealPoint){
-                reveals[i].classList.add('active');
+                <h3 class="user-name">Lê Minh Lộc</h3>
+                <h5>Indie Game Developer</h5>
+                <p>Hi! I'm thirteen years old.<br>I like to make games and deep learning / machine learning<br>projects
+                    in my free time.<br>Programming languages that i know: C++, C#, Python and HTML & CSS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-----Footer-------->
+
+    <section class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/lmlstudiodev" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-facebook" style="color: #00C6FF"></i></a>
+            <a href="https://twitter.com/lmlgames" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"
+                    style="color: #00acee"></i></a>
+            <a href="https://discord.gg/74njsNQfhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"
+                    style="color: #5865F2"></i></a>
+            <a href="https://www.youtube.com/channel/UC6h11z3AIs5xPCL72qdtYLg/featured" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-youtube" style="color: #c4302b"></i></a>
+            <a href="https://lml-studio.itch.io/" target="_blank" rel="noopener noreferrer"><i class="fab fa-itch-io"
+                    style="color: indianred"></i></a>
+            <a href="https://github.com/leminhloc2008" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-github "></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="games.html">Games</a>
+            </li>
+            <li>
+                <a href="blog.html">Blog</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+
+        <p>Made by Le Minh Loc.<br> Check out the <a href="https://github.com/leminhloc2008/lmlgames" target="_blank"
+                rel="noopener noreferrer">source code </a>of this website on Github.</p>
+
+        <p class="copyright">
+            LML STUDIO @ 2021
+        </p>
+
+    </section>
+
+
+
+    <!-----JavaScript for Toggle Menu on Phone----->
+    <script>
+
+        var navLinks = document.getElementById("navLinks")
+
+        function showMenu() {
+            navLinks.style.right = "0"
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px"
+        }
+
+    </script>
+
+    <!-----Reveal Website Elements On Scroll Effect------->
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        var autoReveals = document.querySelectorAll('.autoReveal');
+
+        for (var i = 0; i < autoReveals.length; i++) {
+
+            autoReveals[i].classList.add('active');
+
+        }
+
+        var autoLeftReveals = document.querySelectorAll('.autoLeftReveal');
+
+        for (var i = 0; i < autoLeftReveals.length; i++) {
+            autoLeftReveals[i].classList.add('active');
+        }
+
+        var navReveals = document.querySelectorAll('.navReveal');
+
+        for (var i = 0; i < autoLeftReveals.length; i++) {
+            navReveals[i].classList.add('active');
+        }
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+
+                if (revealtop < windowheight - revealPoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+
+            var leftReveals = document.querySelectorAll('.leftReveal');
+
+            for (var i = 0; i < leftReveals.length; i++) {
+
+                var windowheight = window.innerHeight;
+                var revealtop = leftReveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+
+                if (revealtop < windowheight - revealPoint) {
+                    leftReveals[i].classList.add('active');
+                }
             }
         }
-        
-        var leftReveals = document.querySelectorAll('.leftReveal');
-        
-        for(var i = 0; i<leftReveals.length; i++){
-            
-            var windowheight = window.innerHeight;
-            var revealtop = leftReveals[i].getBoundingClientRect().top;
-            var revealPoint = 150;
-            
-            if(revealtop < windowheight - revealPoint){
-                leftReveals[i].classList.add('active');
-            }
-        }
-    }
-</script>
-    
+    </script>
+
 </body>
+
 </html>
