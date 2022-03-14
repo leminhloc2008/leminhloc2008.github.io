@@ -235,7 +235,7 @@ h3{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 70px
+    padding-top: 70px;
 }
 .games-col{
     flex-basis: 32%;
@@ -247,6 +247,7 @@ h3{
 .games-col img{
     width: 100%;
     display: block;
+    object-fit: cover;
 }
 .layer{
     background: transparent;
